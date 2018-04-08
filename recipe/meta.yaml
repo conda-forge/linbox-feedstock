@@ -11,7 +11,7 @@ source:
   sha256: 47f025fe7aab204fb276307f32a562de357c887c6ef589b9e4f7a57a3b58ecaf
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -29,6 +29,7 @@ requirements:
     - fflas-ffpack
     - m4ri
     - m4rie
+    - openblas 0.2.20|0.2.20.*
   run:
     - gmp >=5.0.1,<7
     - mpfr 3.*
@@ -39,6 +40,7 @@ requirements:
     - fflas-ffpack
     - m4ri
     - m4rie
+    - openblas 0.2.20|0.2.20.*
 
 test:
   commands:
@@ -57,3 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - saraedum
