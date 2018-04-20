@@ -10,6 +10,7 @@ source:
   url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7b69ab617b15ca6684b29d08531ed8899cd4d07ec75799e5d624c4c0a60dc6b2
   patches:
+    # An upstream patch that Sage uses for 8.2
     - patches/9e6e5dd-f4b483c.patch
 
 build:
