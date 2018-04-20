@@ -28,7 +28,7 @@ requirements:
     - libflint
     - givaro
     - iml
-    - fflas-ffpack
+    - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
     - openblas 0.2.20|0.2.20.*
@@ -39,7 +39,7 @@ requirements:
     - libflint
     - givaro
     - iml
-    - fflas-ffpack
+    - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
     - openblas 0.2.20|0.2.20.*
