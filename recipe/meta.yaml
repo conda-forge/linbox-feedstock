@@ -14,7 +14,7 @@ source:
     - patches/9e6e5dd-f4b483c.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -25,9 +25,9 @@ requirements:
     - pkg-config
     - gmp >=5.0.1,<7
     - mpfr 3.*
-    - ntl
+    - ntl 10.*
     - libflint
-    - givaro
+    - givaro >=4.0.3,<5
     - iml
     - fflas-ffpack 2.3.*
     - m4ri
@@ -36,9 +36,9 @@ requirements:
   run:
     - gmp >=5.0.1,<7
     - mpfr 3.*
-    - ntl
+    - ntl 10.*
     - libflint
-    - givaro
+    - givaro >=4.0.3,<5
     - iml
     - fflas-ffpack 2.3.*
     - m4ri
