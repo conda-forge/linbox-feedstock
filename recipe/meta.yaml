@@ -25,7 +25,7 @@ requirements:
     - pkg-config
     - gmp >=5.0.1,<7
     - mpfr 4.*
-    - ntl
+    - ntl 10.*
     - libflint
     - givaro
     - iml
@@ -36,7 +36,7 @@ requirements:
   run:
     - gmp >=5.0.1,<7
     - mpfr 4.*
-    - ntl
+    - ntl 10.*
     - libflint
     - givaro
     - iml
