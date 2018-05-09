@@ -11,7 +11,7 @@ source:
   sha256: 47f025fe7aab204fb276307f32a562de357c887c6ef589b9e4f7a57a3b58ecaf
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
     - libflint
     - givaro
     - iml
-    - fflas-ffpack
+    - fflas-ffpack >=2.2.2,<2.3.0
     - m4ri
     - m4rie
   run:
@@ -36,7 +36,7 @@ requirements:
     - libflint
     - givaro
     - iml
-    - fflas-ffpack
+    - fflas-ffpack >=2.2.2,<2.3.0
     - m4ri
     - m4rie
 
