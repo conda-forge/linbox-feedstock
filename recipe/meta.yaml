@@ -14,7 +14,7 @@ source:
     - patches/9e6e5dd-f4b483c.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -24,8 +24,8 @@ requirements:
     - automake
     - pkg-config
     - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - ntl
+    - mpfr 4.*
+    - ntl 10.*
     - libflint
     - givaro
     - iml
@@ -35,8 +35,8 @@ requirements:
     - openblas 0.2.20|0.2.20.*
   run:
     - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - ntl
+    - mpfr 4.*
+    - ntl 10.*
     - libflint
     - givaro
     - iml
