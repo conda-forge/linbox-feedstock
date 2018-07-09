@@ -14,14 +14,16 @@ Summary: C++ library for exact, high-performance linear algebra
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/linbox-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/linbox-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/linbox-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/linbox-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/linbox-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/linbox-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/linbox-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/linbox-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/linbox/badges/version.svg)](https://anaconda.org/conda-forge/linbox)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/linbox/badges/downloads.svg)](https://anaconda.org/conda-forge/linbox)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-linbox-green.svg)](https://anaconda.org/conda-forge/linbox) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/linbox.svg)](https://anaconda.org/conda-forge/linbox) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/linbox.svg)](https://anaconda.org/conda-forge/linbox) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/linbox.svg)](https://anaconda.org/conda-forge/linbox) |
 
 Installing linbox
 =================

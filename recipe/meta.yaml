@@ -19,31 +19,33 @@ build:
 
 requirements:
   build:
-    - toolchain
     - libtool
     - automake
     - pkg-config
-    - gmp >=5.0.1,<7
-    - mpfr 4.*
-    - ntl 10.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - gmp
+    - mpfr
+    - ntl
     - libflint
     - givaro >=4.0.3,<5
     - iml
     - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
-    - openblas 0.2.20|0.2.20.*
+    - openblas
   run:
-    - gmp >=5.0.1,<7
-    - mpfr 4.*
-    - ntl 10.*
+    - gmp
+    - mpfr
+    - ntl
     - libflint
     - givaro >=4.0.3,<5
     - iml
     - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
-    - openblas 0.2.20|0.2.20.*
+    - openblas
 
 test:
   commands:
