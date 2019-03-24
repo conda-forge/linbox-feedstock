@@ -14,7 +14,7 @@ source:
     - patches/9e6e5dd-f4b483c.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -25,6 +25,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - libblas
+    - libcblas
     - gmp
     - mpfr
     - ntl
@@ -34,7 +36,6 @@ requirements:
     - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
-    - openblas
   run:
     - gmp
     - mpfr
@@ -45,7 +46,6 @@ requirements:
     - fflas-ffpack 2.3.*
     - m4ri
     - m4rie
-    - openblas
 
 test:
   commands:
