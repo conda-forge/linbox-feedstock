@@ -31,9 +31,9 @@ requirements:
     - mpfr
     - ntl
     - libflint
-    - givaro >=4.0.3,<5
+    - givaro
     - iml
-    - fflas-ffpack 2.3.*
+    - fflas-ffpack
     - m4ri
     - m4rie
   run:
@@ -41,9 +41,9 @@ requirements:
     - mpfr
     - ntl
     - libflint
-    - givaro >=4.0.3,<5
+    - {{ pin_compatible("givaro", max_pin="x") }}
     - iml
-    - fflas-ffpack 2.3.*
+    - {{ pin_compatible("fflas-ffpack", max_pin="x.x") }}
     - m4ri
     - m4rie
 
