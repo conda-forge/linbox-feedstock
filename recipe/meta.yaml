@@ -14,7 +14,7 @@ source:
     - patches/9e6e5dd-f4b483c.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -25,27 +25,27 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - libblas
+    - libcblas
     - gmp
     - mpfr
     - ntl
     - libflint
-    - givaro >=4.0.3,<5
+    - givaro
     - iml
-    - fflas-ffpack 2.3.*
+    - fflas-ffpack
     - m4ri
     - m4rie
-    - openblas
   run:
     - gmp
     - mpfr
     - ntl
     - libflint
-    - givaro >=4.0.3,<5
+    - {{ pin_compatible("givaro", max_pin="x") }}
     - iml
-    - fflas-ffpack 2.3.*
+    - {{ pin_compatible("fflas-ffpack", max_pin="x.x") }}
     - m4ri
     - m4rie
-    - openblas
 
 test:
   commands:
