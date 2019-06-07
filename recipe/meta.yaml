@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.6.3" %}
 {% set name = "linbox" %}
 
 package:
@@ -8,13 +8,13 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b69ab617b15ca6684b29d08531ed8899cd4d07ec75799e5d624c4c0a60dc6b2
+  sha256: a58a188307b07c57964e844bceb99321d3043a8a4a1fccc082a54928bb9a0057
   patches:
     # An upstream patch that Sage uses for 8.2: https://github.com/sagemath/sage/blob/8.2.rc4/build/pkgs/linbox/patches/linbox_charpoly_fullCRA.patch
     - patches/9e6e5dd-f4b483c.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
