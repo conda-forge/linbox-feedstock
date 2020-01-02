@@ -1,10 +1,13 @@
 #!/bin/bash
 
-export CPPFLAGS="-I$PREFIX/include -DDISABLE_COMMENTATOR $CPPFLAGS"
-export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
+export CPPFLAGS="-DDISABLE_COMMENTATOR $CPPFLAGS"
 export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
 export CFLAGS="-g -fPIC $CFLAGS"
 export CXXFLAGS="-g -fPIC $CXXFLAGS"
+
+if [[ "$target_platform" == "linux-ppc64le" ]]; then
+  export CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-std=c++17/-std=gnu++17/g")
+fi
 
 chmod +x configure
 
