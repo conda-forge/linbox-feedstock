@@ -35,5 +35,9 @@ chmod +x configure
     --with-ntl="$PREFIX"
 
 make -j${CPU_COUNT}
-make check
+if [[ "$CI" == "drone" ]]; then
+  make check -j${CPU_COUNT}
+else
+  make check
+fi
 make install
