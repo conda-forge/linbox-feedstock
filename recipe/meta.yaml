@@ -6,12 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a58a188307b07c57964e844bceb99321d3043a8a4a1fccc082a54928bb9a0057
+  - url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+    sha256: a58a188307b07c57964e844bceb99321d3043a8a4a1fccc082a54928bb9a0057
+    patches:
+      - patches/linbox-pr-256.patch
+      - patches/remove-linboxsage-libs-from-pc.patch
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win]
 
 requirements:
