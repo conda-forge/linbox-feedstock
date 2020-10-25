@@ -35,5 +35,5 @@ chmod +x configure
     --with-ntl="$PREFIX"
 
 make -j${CPU_COUNT}
-make check
+make check -j${CPU_COUNT}
 make install
