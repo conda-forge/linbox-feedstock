@@ -20,9 +20,9 @@ requirements:
   build:
     - libtool
     - automake
+    - autoconf
     - make
     - pkg-config
-    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
