@@ -5,6 +5,7 @@ sed -i.bak "s/AC_COMPILER_NAME//g" configure.ac
 
 autoreconf -if
 
+export CCNAM=$c_compiler
 export CPPFLAGS="-DDISABLE_COMMENTATOR $CPPFLAGS"
 export CFLAGS="-g -fPIC $CFLAGS"
 export CXXFLAGS="-g -fPIC $CXXFLAGS"
