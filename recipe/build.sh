@@ -1,9 +1,11 @@
 #!/bin/bash
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/gnuconfig/config.* ./build-aux
+
+sed -i.bak "s/INSTR_SET//g" configure.ac
+sed -i.bak "s/AC_COMPILER_NAME//g" configure.ac
+
+autoreconf -if
 
 export CPPFLAGS="-DDISABLE_COMMENTATOR $CPPFLAGS"
-export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
 export CFLAGS="-g -fPIC $CFLAGS"
 export CXXFLAGS="-g -fPIC $CXXFLAGS"
 
