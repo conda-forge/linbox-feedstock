@@ -39,11 +39,7 @@ chmod +x configure
     --with-ntl="$PREFIX"
 
 make -j${CPU_COUNT}
-if [[ "$CI" == "drone" ]]; then
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" || "$CMAKE_CROSSCOMPILING_EMULATOR" != "" ]]; then
   make check -j${CPU_COUNT}
-fi
-else
-  make check
 fi
 make install
