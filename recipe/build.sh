@@ -1,7 +1,12 @@
 #!/bin/bash
 
+sed -i.bak "s/INSTR_SET//g" configure.ac
+sed -i.bak "s/AC_COMPILER_NAME//g" configure.ac
+
+autoreconf -if
+
+export CCNAM=$c_compiler
 export CPPFLAGS="-DDISABLE_COMMENTATOR $CPPFLAGS"
-export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
 export CFLAGS="-g -fPIC $CFLAGS"
 export CXXFLAGS="-g -fPIC $CXXFLAGS"
 
@@ -35,9 +40,7 @@ chmod +x configure
     --with-ntl="$PREFIX"
 
 make -j${CPU_COUNT}
-if [[ "$CI" == "drone" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" || "$CMAKE_CROSSCOMPILING_EMULATOR" != "" ]]; then
   make check -j${CPU_COUNT}
-else
-  make check
 fi
 make install
