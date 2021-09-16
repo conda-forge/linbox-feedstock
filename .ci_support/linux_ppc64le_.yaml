@@ -20,6 +20,8 @@ libblas:
 - 3.8 *netlib
 libcblas:
 - 3.8 *netlib
+libflint:
+- '2.8'
 mpfr:
 - '4'
 ntl:

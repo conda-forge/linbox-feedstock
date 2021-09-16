@@ -18,6 +18,8 @@ libblas:
 - 3.8 *netlib
 libcblas:
 - 3.8 *netlib
+libflint:
+- '2.8'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpfr:
