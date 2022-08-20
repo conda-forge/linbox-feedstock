@@ -1,4 +1,4 @@
-{% set version = "1.6.3" %}
+{% set version = "1.7.0" %}
 {% set name = "linbox" %}
 
 package:
@@ -7,13 +7,13 @@ package:
 
 source:
   - url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-    sha256: a58a188307b07c57964e844bceb99321d3043a8a4a1fccc082a54928bb9a0057
+    sha256: 6d2159fd395be0298362dd37f6c696676237bc8e2757341fbc46520e3b466bcc
     patches:
       - patches/linbox-pr-256.patch
       - patches/remove-linboxsage-libs-from-pc.patch
 
 build:
-  number: 7
+  number: 0
   skip: true  # [win]
 
 requirements:
