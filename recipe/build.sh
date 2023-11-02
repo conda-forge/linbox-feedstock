@@ -10,9 +10,9 @@ export CPPFLAGS="-DDISABLE_COMMENTATOR $CPPFLAGS"
 export CFLAGS="-g -fPIC $CFLAGS"
 export CXXFLAGS="-g -fPIC $CXXFLAGS"
 
-if [[ "$target_platform" == "linux-ppc64le" ]]; then
-  export CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-std=c++17/-std=gnu++17/g")
-fi
+# givaro defined bool_constant but since C++17 there is also std::bool_constant which leads to ambiguity.
+# linbox needs std::binary_function which was removed in C++17.
+export CXXFLAGS="$CXXFLAGS -std=c++14"
 
 chmod +x configure
 
