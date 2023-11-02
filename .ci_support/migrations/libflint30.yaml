@@ -3,5 +3,5 @@ __migrator:
   kind: version
   migration_number: 1
 libflint:
-- '2.9'
-migrator_ts: 1659694863.1269183
+- '3.0'
+migrator_ts: 1698707763.2488656
