@@ -47,7 +47,9 @@ test:
 about:
   home: http://linalg.org/
   license: LGPL-2.1-or-later
-  license_file: COPYING.LESSER
+  license_file:
+    - COPYING
+    - COPYING.LESSER
   summary: C++ library for exact, high-performance linear algebra
   dev_url: https://github.com/linbox-team/linbox
 
