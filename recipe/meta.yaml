@@ -36,16 +36,6 @@ requirements:
     - fflas-ffpack
     - m4ri
     - m4rie
-  run:
-    - gmp
-    - mpfr
-    - ntl
-    - libflint
-    - {{ pin_compatible("givaro", max_pin="x") }}
-    - iml
-    - {{ pin_compatible("fflas-ffpack", max_pin="x.x") }}
-    - m4ri
-    - m4rie
 
 test:
   commands:
