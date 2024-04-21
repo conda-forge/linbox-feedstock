@@ -1,4 +1,4 @@
-{% set version = "1.6.3" %}
+{% set version = "1.7.0" %}
 {% set name = "linbox" %}
 
 package:
@@ -6,15 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-    sha256: a58a188307b07c57964e844bceb99321d3043a8a4a1fccc082a54928bb9a0057
-    patches:
-      - patches/linbox-pr-256.patch
-      - patches/remove-linboxsage-libs-from-pc.patch
+  url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6d2159fd395be0298362dd37f6c696676237bc8e2757341fbc46520e3b466bcc
+  patches:
+  - 0001-Empty-commentator-when-compiling-with-DDISABLE_COMME.patch
+  - 0001-Disable-failing-test.patch
 
 build:
-  number: 8
+  number: 0
   skip: true  # [win]
+  run_exports:
+    - {{ pin_subpackage("linbox", "x.x") }}
 
 requirements:
   build:
@@ -37,16 +39,6 @@ requirements:
     - fflas-ffpack
     - m4ri
     - m4rie
-  run:
-    - gmp
-    - mpfr
-    - ntl
-    - libflint
-    - {{ pin_compatible("givaro", max_pin="x") }}
-    - iml
-    - {{ pin_compatible("fflas-ffpack", max_pin="x.x") }}
-    - m4ri
-    - m4rie
 
 test:
   commands:
@@ -58,7 +50,9 @@ test:
 about:
   home: http://linalg.org/
   license: LGPL-2.1-or-later
-  license_file: COPYING.LESSER
+  license_file:
+    - COPYING
+    - COPYING.LESSER
   summary: C++ library for exact, high-performance linear algebra
   dev_url: https://github.com/linbox-team/linbox
 

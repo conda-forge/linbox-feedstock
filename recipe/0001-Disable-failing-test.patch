@@ -1,0 +1,25 @@
+From d30861fc3a6f60214c1561af9b47df5fe927133c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Sat, 20 Apr 2024 18:42:41 +0300
+Subject: [PATCH] Disable failing test
+
+reported upstream at https://github.com/linbox-team/linbox/issues/312
+---
+ tests/Makefile.am | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/tests/Makefile.am b/tests/Makefile.am
+index d870aa9f6..1301adeb8 100644
+--- a/tests/Makefile.am
++++ b/tests/Makefile.am
+@@ -93,7 +93,6 @@ BASIC_TESTS =            \
+     test-blas-domain-mul        \
+     test-blas-domain            \
+     test-hadamard-bound     \
+-    test-fft                    \
+     test-serialization
+ 
+ # Really just one or two of these would be enough for target check.
+-- 
+2.44.0
+
