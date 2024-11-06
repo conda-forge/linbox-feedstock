@@ -13,7 +13,7 @@ source:
   - 0001-Disable-failing-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("linbox", "x.x") }}
@@ -26,6 +26,7 @@ requirements:
     - make
     - pkg-config
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - libblas
