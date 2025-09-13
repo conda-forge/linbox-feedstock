@@ -9,7 +9,6 @@ source:
   url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: a2b5f910a54a46fa75b03f38ad603cae1afa973c95455813d85cf72c27553bd8
   patches:
-    - 0001-Empty-commentator-when-compiling-with-DDISABLE_COMME.patch
     - 0001-Disable-failing-test.patch
 
 build:
