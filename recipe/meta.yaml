@@ -11,6 +11,8 @@ source:
   patches:
   - 0001-Empty-commentator-when-compiling-with-DDISABLE_COMME.patch
   - 0001-Disable-failing-test.patch
+  # Backport patch fixing compiler errors from 1.7.1
+  - const.patch
 
 build:
   number: 3
