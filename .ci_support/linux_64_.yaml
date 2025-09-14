@@ -27,7 +27,7 @@ libblas:
 libcblas:
 - 3.9.* *netlib
 libflint:
-- '3.2'
+- '3.3'
 mpfr:
 - '4'
 ntl:
