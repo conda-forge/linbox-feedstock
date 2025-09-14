@@ -10,6 +10,8 @@ source:
   sha256: a2b5f910a54a46fa75b03f38ad603cae1afa973c95455813d85cf72c27553bd8
   patches:
     - 0001-Disable-failing-test.patch
+    # Backport upstream patch to work around https://github.com/linbox-team/linbox/issues/328
+    - ntl.patch
 
 build:
   number: 0
