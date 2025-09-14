@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 {% set name = "linbox" %}
 
 package:
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://github.com/linbox-team/linbox/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d2159fd395be0298362dd37f6c696676237bc8e2757341fbc46520e3b466bcc
+  sha256: a2b5f910a54a46fa75b03f38ad603cae1afa973c95455813d85cf72c27553bd8
   patches:
-  - 0001-Empty-commentator-when-compiling-with-DDISABLE_COMME.patch
-  - 0001-Disable-failing-test.patch
+    - 0001-Disable-failing-test.patch
+    # Backport upstream patch to work around https://github.com/linbox-team/linbox/issues/328
+    - ntl.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("linbox", "x.x") }}
