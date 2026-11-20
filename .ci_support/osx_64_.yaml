@@ -25,7 +25,7 @@ libblas:
 libcblas:
 - 3.9.* *netlib
 libflint:
-- '3.5'
+- '3.6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpfr:
